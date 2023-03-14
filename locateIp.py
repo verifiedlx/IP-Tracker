@@ -1,7 +1,6 @@
 import platform
 import sys
 import os
-import requests
 import pygeoip
 import socket
 from packaging import version
@@ -38,10 +37,14 @@ def get_data():
     option = input("Select Option: ")
     print(" ")
     if option =="1":
+        print(" ")
         hostName = input("Enter site name (e.g google.com): ")
+        print(" ")
         hostIp = socket.gethostbyname(hostName)
         print("website_name: "+hostName+ " with IP: "+hostIp)
+        return get_data()
     elif option =="2":
+        print(" ")
         ip_id = input("Enter Ip_address: ")
         query = pygeoip.GeoIP("GeoLiteCity.dat")
         result = query.record_by_addr(ip_id)
@@ -52,11 +55,13 @@ def get_data():
             file.write("\n[*] End of info.\n*")
             print(" ")
         print("IP infomation found and saved as 'results.txt'. ")
+        return get_data()
     elif option == "3":
         print("")
         try:
             os.system("curl ipinfo.io/ip")
             print(" << is your ip!")
+            return get_data()
         except TimeoutError:
             print("network timeOut check your internet...")    
     elif option == "4":
