@@ -1,0 +1,18 @@
+[*] Target info: 
+
+* dma_code: 803
+area_code: 213
+metro_code: Los Angeles, CA
+postal_code: 90017
+country_code: US
+country_code3: USA
+country_name: United States
+continent: NA
+region_code: CA
+city: Los Angeles
+latitude: 34.058400000000006
+longitude: -118.27799999999999
+time_zone: America/Los_Angeles
+
+[*] End of info.
+*

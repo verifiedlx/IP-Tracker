@@ -10,7 +10,6 @@ if os.environ == "NT":
     os.system("cls")
 else:
     os.system("clear")
-print(os.name)
 if version.parse(platform.python_version()) < version.parse('3.0'):
     print("This tool needs Python 3")
     sys.exit("Exiting...")
@@ -34,14 +33,15 @@ print("""
 
 """)
 def get_data():
-    option = input("Select Option: ")
+    option = input("[+] Select Option: ")
     print(" ")
     if option =="1":
         print(" ")
         hostName = input("Enter site name (e.g google.com): ")
         print(" ")
         hostIp = socket.gethostbyname(hostName)
-        print("website_name: "+hostName+ " with IP: "+hostIp)
+        print("website_name: "+hostName+ " with IP: "+hostIp +"\n")
+        
         return get_data()
     elif option =="2":
         print(" ")
@@ -54,13 +54,13 @@ def get_data():
                 file.write(str(key) + ": "+str(val)+ "\n")
             file.write("\n[*] End of info.\n*")
             print(" ")
-        print("IP infomation found and saved as 'results.txt'. ")
+        print("IP infomation found and saved as 'results.txt'. "+"\n")
         return get_data()
     elif option == "3":
         print("")
         try:
             os.system("curl ipinfo.io/ip")
-            print(" << is your ip!")
+            print(" << is your ip!"+"\n")
             return get_data()
         except TimeoutError:
             print("network timeOut check your internet...")    
@@ -69,7 +69,7 @@ def get_data():
         print(" ")
         print("GoodBye...")   
     else:
-        print("Please select valid option from above. ")
+        print("Please select valid option from above. "+"\n")
         print(" ")
         return get_data()
 
