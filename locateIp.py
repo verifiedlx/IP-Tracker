@@ -20,9 +20,9 @@ print("""
 
                         ############################################
 
-                                        IpInfoGa
+                                        IP-Tracker
                             
-
+                                      by:- hackSavior
                         #############################################
 
 """)
@@ -67,11 +67,6 @@ def get_data():
         print("Please select valid option from above. ")
         print(" ")
         return get_data()
-
-with open("results.txt","r") as file:
-    lines = file.readlines()
-    forthLine = lines[12]
-    print(forthLine)
 
 
 get_data()    
