@@ -12,7 +12,7 @@ However, it will work on other linux distro like ubuntu and parrot
 		Installation
 
 1. Firstly you must have python3 on your system.
-can get it <a href="https://python.org/downloads" target="blank">Here</a>
+can get it <a href="https://python.org/downloads" target="_blank"> Here</a>
 2. Clone the respository: git clone https://github.com/hackSavior/IP-Tracker.git
 3. Install the requirement python packages: pip install -r requirements.txt
 4. Ready to launch: python3 locateIp.py
